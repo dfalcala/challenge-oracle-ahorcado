@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+body {
+    background: rgba(243, 245, 252, 1);
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Inter","Lucida Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+/* - - - header - - - */
+.header {
+    background-color: rgba(170, 178, 213, 1);
+    color: #ffffff;
+    padding: 15px;
+}
+.logo-alura{
+    width: 120px;
+    height: 48px;
+
+    left: 36.67%;
+    right: 37.43%;
+    margin: 40px auto auto 40px;
+}
+/* - - - Body - - - */
+.central{
+    width: 100%;
+    height: 77vh;
+}
+.botones-inicio{ /* contenedor botones encriptar y desencriptar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.btnIniciar{ /* botón encriptar */
+
+    margin: 20px auto;
+    padding: 24px 0;
+    gap: 8px;
+    width: 60%;
+    height: 8vh;
+
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.btnPalabra{ /* botón desencriptar */
+
+    margin: 20px auto;
+    padding: 24px 0;
+    gap: 8px;
+    width: 50%;
+    height: 8vh;
+
+    background: none;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+/* Light blue/light-blue-100/#F3F5FC/rgba(243, 245, 252, 1) */
+.divJuego{
+    display: none;
+    position: relative;
+    float: none;
+    width: 100%;
+    height: 100%;
+}
+.divEntrada{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 86%;
+    margin: auto;
+}
+.entrada{
+    width: 100%;
+    height: 90%;
+    background: transparent;
+    resize: none;
+    border: 0 none;
+    font-size: 12px;
+    color: rgba(243, 245, 252, 1);
+    outline: none;
+}
+.divDibujo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.canvasDibujo{
+    margin: 0px auto 10px auto;
+    padding: 0;
+
+    background: #F3F5FC;
+    width: 300px;
+    height: 400px;
+}
+.buenas{
+    display: none;
+}
+.canvasPalabra{
+    margin: 5px;
+    padding: 0;
+    background: #F3F5FC;
+    width: 300px;
+    height: 60px;
+}
+.malas{
+    width: 50%;
+    height: 1em;
+    font-size: 32px;
+    text-align: center;
+    color: #0A3871;
+    margin: 5px auto;
+}
+.botones-juego{ /* contenedor botones encriptar y desencriptar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 50%;
+    min-width: 30%;
+    max-height: 10%;
+    min-height: 10%;
+    margin: 0 auto;
+}
+.btnNuevo{ /* botón encriptar */
+
+    margin: auto 20px;
+    gap: 8px;
+    width: 60%;
+    height: 8vh;
+
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.btnDesistir{ /* botón desencriptar */
+
+    margin: auto 20px;
+    padding: 24px 0;
+    gap: 8px;
+    width: 50%;
+    height: 8vh;
+
+    background: none;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+.agregar{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.inputAgregar{ /* textarea entrada */
+    width: 100%;
+    height: 62vh;
+    padding: 15px;
+    margin-top: 7px;
+    background: transparent;
+    resize: none;
+    border: 0 none;
+    font-size: 32px;
+    color: #0A3871;
+    outline: none;
+}
+.inputAgregar::placeholder{
+    color: #0A3871;
+    text-transform: none;
+}
+.espacio{
+    display: inline-flex;
+    padding: 10px;
+    text-align: left;
+    color: #FF2600;
+    width: 100%;
+}
+.nota{
+    display: flex;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.icon{ /* icono de advertencia */
+    float: left;
+    margin: 0px 10px;
+}
+.botonesPalabra{ /* contenedor botones encriptar y desencriptar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    width: 100%;
+    margin: 20px 0;
+}
+.btnGuardar{ /* botón encriptar */
+
+    margin: auto 20px;
+    gap: 8px;
+    width: 60%;
+    height: 8vh;
+
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.btnCancelar{ /* botón desencriptar */
+
+    margin: auto 20px;
+    padding: 24px 0;
+    gap: 8px;
+    width: 50%;
+    height: 8vh;
+
+    background: none;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin: 20px auto;
+    width: 100%;
+    padding: 10px;
+
+    color: rgba(215, 221, 229, 1);
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    line-height: 150%;
+    
+    background: rgba(117, 127, 178, 1);
+    border-radius: 10%;
+    border-top: 9px solid rgba(215, 221, 229, 1);
+    box-shadow: 6px 6px 6px 0px rgba(0, 60, 255, 0.294);
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+/*  */
+
+@media screen and (max-width: 850px) {
+    .botones,.btnIniciar{
+        width: 90%;
+    }
+    .btnPalabra{
+        width: 70%;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
